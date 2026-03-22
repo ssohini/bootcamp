@@ -2,6 +2,12 @@
 
 A comprehensive full-stack development bootcamp featuring two cutting-edge decentralized applications built on the **Stellar Soroban blockchain** with modern web technologies.
 
+## 🎬 Project Demo
+
+Click below to watch the full demo 👇
+
+[![Watch Demo](https://img.youtube.com/vi/hVSH87A518s/0.jpg)](https://youtu.be/hVSH87A518s)
+
 ```
 ███████╗████████╗███████╗██╗     ██╗      █████╗ ██████╗ 
 ██╔════╝╚══██╔══╝██╔════╝██║     ██║     ██╔══██╗██╔══██╗
