@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranade:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&family=Fredoka:wght@600;700;800;900&family=Poppins:wght@700;800;900&family=Pacifico&family=Caveat:wght@700&family=Sreda:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.adobe.com/fonts/adobe-casion');
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@900&display=swap');
+
+@import "tailwindcss";
+
+/* Root Variables - Y2K Neon */
+:root {
+  --neo-black: #000000;
+  --neo-yellow: #FFD700;
+  --neo-blue: #0066FF;
+  --neo-red: #FF0000;
+  --neo-green: #00CC00;
+  --neo-white: #FFFFFF;
+  
+  /* Y2K Neon Colors */
+  --y2k-hotpink: #FF1493;
+  --y2k-deeppink: #FF10F0;
+  --y2k-cyan: #00FFFF;
+  --y2k-lime: #00FF00;
+  --y2k-purple: #9D00FF;
+  --y2k-black: #0a0a0a;
+  --y2k-dark: #1a1a1a;
+  
+  /* Spacing */
+  --spacing-unit: 4px;
+  
+  /* Border Thickness */
+  --border-thick: 6px;
+  --border-medium: 4px;
+  --border-thin: 2px;
+  
+  /* Shadows */
+  --shadow-sm: 0px 4px 0px -2px rgba(0, 0, 0, 0.8);
+  --shadow-md: 0px 8px 0px -2px rgba(0, 0, 0, 0.8);
+  --shadow-lg: 0px 16px 0px -4px rgba(0, 0, 0, 0.8);
+  --shadow-xl: 0px 24px 0px -6px rgba(0, 0, 0, 0.8);
+  --shadow-2xl: 0px 32px 0px -8px rgba(0, 0, 0, 0.8);
+  
+  /* Y2K Neon Glow */
+  --glow-hotpink: 0 0 10px #FF1493, 0 0 20px #FF1493;
+  --glow-cyan: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
+  --glow-purple: 0 0 10px #9D00FF, 0 0 20px #9D00FF;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  color: var(--neo-white);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Metallic Chrome Gradient - Y2K Aesthetic */
+.chrome-gradient {
+  background: linear-gradient(90deg, 
+    #e8e8e8 0%, 
+    #d0d0d0 25%, 
+    #a8a8a8 50%, 
+    #d0d0d0 75%, 
+    #e8e8e8 100%);
+  text-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.8),
+    0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.glossy-effect {
+  background: linear-gradient(180deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 50%, 
+    rgba(0, 0, 0, 0.1) 100%);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.neon-chrome {
+  background: linear-gradient(135deg, 
+    rgba(255, 20, 147, 0.3) 0%, 
+    rgba(0, 255, 255, 0.1) 50%, 
+    rgba(255, 20, 147, 0.3) 100%);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 15px rgba(255, 20, 147, 0.4);
+}
+
+/* Typography - Y2K Neon - Unified Font System */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--y2k-hotpink);
+  text-shadow: 0 0 10px var(--y2k-hotpink);
+}
+
+h1 {
+  font-size: clamp(36px, 8vw, 72px);
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: clamp(28px, 6vw, 48px);
+  margin-bottom: 1.25rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: clamp(24px, 5vw, 36px);
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+
+h4 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+code, pre {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+}
+
+/* Y2K Neon Section Styling */
+.y2k-section {
+  background-color: var(--y2k-black);
+  border: 4px solid var(--y2k-hotpink);
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);
+  background: linear-gradient(135deg, #0a0a0a 0%, #15151f 50%, #0a0a0a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.y2k-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  pointer-events: none;
+}
+
+.y2k-section-title {
+  color: var(--y2k-hotpink);
+  font-weight: bold;
+  font-size: 16px;
+  background-color: var(--y2k-hotpink);
+  color: var(--y2k-black);
+  padding: 8px 12px;
+  margin: -16px -16px 12px -16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0 10px var(--y2k-hotpink);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+
+.y2k-section-title.cursive {
+  font-family: 'adobe-casion', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 28px;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  padding: 12px 12px;
+  margin: -16px -16px 16px -16px;
+}
+
+/* Poll Card Styling */
+.poll-card {
+  background-color: var(--y2k-dark);
+  border: 3px solid var(--y2k-cyan);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f1a 100%);
+}
+
+.poll-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  pointer-events: none;
+}
+
+.poll-card:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), inset 0 0 10px rgba(0, 255, 255, 0.1);
+  border-color: var(--y2k-hotpink);
+}
+
+.poll-card-content {
+  padding: 18px;
+  padding-right: 22px;
+  padding-bottom: 22px;
+  flex: 1;
+}
+
+.poll-card-title {
+  font-family: 'Poppins', sans-serif;
+  color: var(--y2k-hotpink);
+  font-weight: 900;
+  font-size: 14px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 12px rgba(255, 20, 147, 0.6), 0 0 20px rgba(255, 20, 147, 0.2);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+}
+
+.poll-card-meta {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.poll-card-author {
+  color: var(--neo-white);
+  margin-bottom: 4px;
+}
+
+.poll-card-votes {
+  color: var(--y2k-hotpink);
+  font-weight: 900;
+  text-shadow: 0 0 8px rgba(255, 20, 147, 0.6);
+}
+
+.poll-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  border-top: 2px solid var(--y2k-cyan);
+  margin-top: auto;
+  background: linear-gradient(180deg, transparent, rgba(0, 255, 255, 0.05));
+}
+
+.poll-vote-btn {
+  background: none;
+  border: none;
+  color: var(--y2k-hotpink);
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 0 8px rgba(255, 20, 147, 0.5);
+  letter-spacing: 0.03em;
+}
+
+.poll-vote-btn:hover {
+  color: var(--y2k-cyan);
+  text-shadow: 0 0 15px var(--y2k-cyan), 0 0 25px rgba(0, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* Buttons - Y2K Neon */
+button,
+.button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  border: 3px solid var(--y2k-hotpink);
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(180deg, var(--y2k-hotpink) 0%, #ff0080 100%);
+  color: var(--y2k-black);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 13px;
+  position: relative;
+  box-shadow: 0 0 10px var(--y2k-hotpink), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  display: inline-block;
+}
+
+button:hover,
+.button:hover {
+  background-color: var(--y2k-deeppink);
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px var(--y2k-hotpink), 0 0 30px var(--y2k-hotpink);
+}
+
+button:active,
+.button:active {
+  transform: translateY(0px);
+  box-shadow: 0 0 10px var(--y2k-hotpink);
+}
+
+button.primary {
+  background-color: var(--y2k-hotpink);
+  border-color: var(--y2k-hotpink);
+}
+
+button.secondary {
+  background-color: var(--y2k-cyan);
+  color: var(--y2k-black);
+  border-color: var(--y2k-cyan);
+  box-shadow: 0 0 10px var(--y2k-cyan);
+}
+
+button.danger {
+  background-color: var(--y2k-purple);
+  color: var(--neo-white);
+  border-color: var(--y2k-purple);
+  box-shadow: 0 0 10px var(--y2k-purple);
+}
+
+button.success {
+  background-color: var(--y2k-lime);
+  color: var(--y2k-black);
+  border-color: var(--y2k-lime);
+  box-shadow: 0 0 10px var(--y2k-lime);
+}
+
+/* Links */
+a {
+  color: var(--y2k-cyan);
+  text-decoration: none;
+  border-bottom: 2px dashed var(--y2k-cyan);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  border-bottom-style: solid;
+  padding-bottom: 2px;
+  color: var(--y2k-hotpink);
+  border-bottom-color: var(--y2k-hotpink);
+}
+
+/* Forms */
+input,
+textarea,
+select {
+  font-family: 'Inter', sans-serif;
+  border: 3px solid var(--y2k-hotpink);
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: var(--y2k-black);
+  color: var(--y2k-hotpink);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--y2k-cyan);
+  box-shadow: 0 0 20px var(--y2k-cyan);
+  transform: translateY(-2px);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--y2k-hotpink);
+  color: var(--y2k-black);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--y2k-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--y2k-hotpink);
+  border: 2px solid var(--y2k-dark);
+  box-shadow: 0 0 10px var(--y2k-hotpink);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--y2k-cyan);
+  box-shadow: 0 0 10px var(--y2k-cyan);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--y2k-dark);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--y2k-hotpink);
+  box-shadow: 0 0 10px var(--y2k-hotpink);
+}
+
+/* Cards - Y2K Neon */
+.card,
+[role="article"],
+[role="region"] {
+  border: 3px solid var(--y2k-hotpink);
+  padding: 16px;
+  background-color: var(--y2k-black);
+  box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(255, 20, 147, 0.5);
+}
+
+/* Page Links */
+.page-link {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s ease;
+}
+
+/* Utility Classes */
+.text-bold {
+  font-weight: 700;
+}
+
+.text-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.border-black {
+  border: 3px solid var(--y2k-hotpink);
+}
+
+.bg-yellow {
+  background-color: var(--y2k-hotpink);
+}
+
+.bg-blue {
+  background-color: var(--y2k-cyan);
+}
+
+.bg-red {
+  background-color: var(--y2k-purple);
+}
+
+.bg-green {
+  background-color: var(--y2k-lime);
+}
+
+.shadow-neo {
+  box-shadow: 0 0 10px var(--y2k-hotpink);
+}
+
+.shadow-neo-lg {
+  box-shadow: 0 0 25px var(--y2k-hotpink);
+}
+
+.shadow-neo-xl {
+  box-shadow: var(--shadow-xl);
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+  
+  h2 {
+    font-size: 28px;
+  }
+  
+  h3 {
+    font-size: 24px;
+  }
+  
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Performance Optimization */
+.poll-card,
+.poll-list,
+button,
+a,
+.hover-element {
+  will-change: transform, box-shadow;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.poll-card,
+.section {
+  will-change: box-shadow, transform;
+  backface-visibility: hidden;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  will-change: background-color;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Y2K Doodle Animation System */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes swish {
+  0% {
+    transform: skewX(-5deg) translateX(-10px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: skewX(5deg) translateX(10px);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Doodle Classes */
+.doodle-circle {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--y2k-hotpink);
+  box-shadow: 0 0 8px var(--y2k-hotpink);
+  animation: float 3s ease-in-out infinite;
+  margin: 0 4px;
+}
+
+.doodle-swish {
+  display: inline-block;
+  width: 30px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--y2k-cyan), var(--y2k-hotpink));
+  animation: swish 4s ease-in-out infinite;
+  margin: 0 2px;
+}
+
+.doodle-accent {
+  position: relative;
+  display: inline-block;
+}
+
+.doodle-accent::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--y2k-hotpink), transparent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.circle-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--y2k-cyan);
+  border-radius: 50%;
+  background: radial-gradient(circle at center, var(--y2k-hotpink), transparent);
+  box-shadow: 0 0 10px var(--y2k-cyan), inset 0 0 6px var(--y2k-hotpink);
+  animation: spin 4s linear infinite;
+  margin: 0 4px;
+}
+
+/* Poll card votes styling */
+.poll-card-votes {
+  color: var(--y2k-hotpink);
+  text-shadow: 0 0 10px var(--y2k-hotpink), 0 0 20px rgba(255, 20, 147, 0.5);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
