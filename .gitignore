@@ -1,0 +1,34 @@
+# Rust/Cargo
+target/
+Cargo.lock
+*.rs.bk
+
+# Build artifacts
+*.wasm
+dist/
+build/
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.DS_Store
+
+# Certificate files
+*.sst
+*.pem
+*.key
+
+# OS
+Thumbs.db

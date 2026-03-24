@@ -13,11 +13,11 @@ A comprehensive full-stack development bootcamp featuring two cutting-edge decen
 
 ---
 
-## 📚 Projects Overview
+## 📚 Project Overview
 
-This bootcamp contains two innovative blockchain applications:
+This bootcamp features an innovative blockchain application built on **Stellar Soroban**:
 
-### 1. **SimplePoll** - Decentralized Polling Platform
+### **SimplePoll** - Decentralized Polling Platform
 A full-featured polling application with Web3 integration and immutable on-chain voting records.
 
 **Tech Stack:**
@@ -37,17 +37,6 @@ A full-featured polling application with Web3 integration and immutable on-chain
 - 👛 Freighter wallet integration
 
 📂 **Location:** `/simplepoll`
-
----
-
-### 2. **Hello Contract** - Soroban Smart Contract
-A foundational Rust smart contract demonstrating core Soroban patterns and best practices.
-
-**Tech Stack:**
-- **Language:** Rust
-- **Framework:** Soroban SDK
-- **Network:** Stellar Testnet
-- **Build:** Cargo with WASM compilation
 
 **Key Features:**
 - 📖 Educational contract examples
